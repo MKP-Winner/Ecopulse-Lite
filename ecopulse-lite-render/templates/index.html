@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoPulse Lite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>EcoPulse Lite 🌍</h1>
+        <p>Track your eco-friendly actions and see your impact!</p>
+    </header>
+    <div class="container">
+        <form id="actionForm">
+            <label>Action: 
+                <select id="action">
+                    <option value="Recycling">Recycling</option>
+                    <option value="Planting Tree">Planting Tree</option>
+                    <option value="Saving Water">Saving Water</option>
+                </select>
+            </label>
+            <label>Quantity: <input type="number" id="quantity" required></label>
+            <button type="submit">Log Action</button>
+        </form>
+
+        <h2>Action Log</h2>
+        <pre id="log"></pre>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
